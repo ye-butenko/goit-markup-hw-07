@@ -12,6 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/header.css" />
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +28,7 @@
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
-          <a href="./index.html" class="logo header-logo link">
+          <a href="./index.html" class="logo link">
             Web<span class="logo-std-header">Studio</span>
           </a>
           <ul class="header-nav-list list">
@@ -60,6 +61,80 @@
             </li>
           </ul>
         </address>
+        <button class="mobile-menu-open js-open-menu" type="button">
+          <svg class="icon-menu-hamburger icon" width="32" height="22">
+            <use href="./images/icon.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-container">
+          <button
+            class="mobile-btn-close btn-close js-close-menu"
+            type="button"
+          >
+            <svg class="icon" width="8" height="8">
+              <use href="./images/icon.svg#icon-btn-close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-nav-list list">
+            <li class="header-nav-item">
+              <a href="./index.html" class="current header-nav-link link"
+                >Studio</a
+              >
+            </li>
+            <li class="header-nav-item">
+              <a href="./portfolio.html" class="header-nav-link link"
+                >Portfolio</a
+              >
+            </li>
+            <li class="header-nav-item">
+              <a href="" class="header-nav-link link">Contacts</a>
+            </li>
+          </ul>
+          <ul class="mobile-contact-list list">
+            <li class="contact-item">
+              <a href="tel:+110001111111" class="mobile-link-tel link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="contact-item">
+              <a href="mailto:info@devstudio.com" class="mobile-link-mail link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social-list list">
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icon.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icon.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icon.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/icon.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -76,7 +151,7 @@
       <!-- section 2 Digitalization -->
       <section class="section section-feature">
         <div class="container">
-          <h2 class="feature-title title-primary" hidden>
+          <h2 class="visually-hidden">
             Digital Strategy and Design for Business Growth
           </h2>
           <ul class="feature-list list">
@@ -86,8 +161,8 @@
                   <use href="./images/icon.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3 class="feature-item-title title-secondary">Strategy</h3>
-              <p class="text">
+              <h3 class="title-secondary">Strategy</h3>
+              <p class="feature-text">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
@@ -98,8 +173,8 @@
                   <use href="./images/icon.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="feature-item-title title-secondary">Punctuality</h3>
-              <p class="text">
+              <h3 class="title-secondary">Punctuality</h3>
+              <p class="feature-text">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
@@ -110,8 +185,8 @@
                   <use href="./images/icon.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="feature-item-title title-secondary">Diligence</h3>
-              <p class="text">
+              <h3 class="title-secondary">Diligence</h3>
+              <p class="feature-text">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
@@ -122,8 +197,8 @@
                   <use href="./images/icon.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="feature-item-title title-secondary">Technologies</h3>
-              <p class="text">
+              <h3 class="title-secondary">Technologies</h3>
+              <p class="feature-text">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -176,7 +251,7 @@
                 height="260"
               />
               <div class="team-card-desc">
-                <h3 class="title-secondary">Mark Guerrero</h3>
+                <h3 class="team-name">Mark Guerrero</h3>
                 <p class="team-card-text">Product Designer</p>
                 <ul class="social-list list">
                   <li class="social-item">
@@ -218,7 +293,7 @@
                 height="260"
               />
               <div class="team-card-desc">
-                <h3 class="title-secondary">Tom Ford</h3>
+                <h3 class="team-name">Tom Ford</h3>
                 <p class="team-card-text">Frontend Developer</p>
                 <ul class="social-list list">
                   <li class="social-item">
@@ -260,7 +335,7 @@
                 height="260"
               />
               <div class="team-card-desc">
-                <h3 class="title-secondary">Camila Garcia</h3>
+                <h3 class="team-name">Camila Garcia</h3>
                 <p class="team-card-text">Marketing</p>
                 <ul class="social-list list">
                   <li class="social-item">
@@ -302,7 +377,7 @@
                 height="260"
               />
               <div class="team-card-desc">
-                <h3 class="title-secondary">Daniel Wilson</h3>
+                <h3 class="team-name">Daniel Wilson</h3>
                 <p class="team-card-text">UI Designer</p>
                 <ul class="social-list list">
                   <li class="social-item">
@@ -391,7 +466,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer-container container">
         <div class="footer-text">
           <a href="./index.html" class="logo link">
@@ -455,13 +530,17 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn-close" type="button" data-modal-close>
+        <button
+          class="modal-btn-close btn-close"
+          type="button"
+          data-modal-close
+        >
           <svg class="icon" width="8" height="8">
-            <use href="./images/icon.svg#icon-modal-btn-close"></use>
+            <use href="./images/icon.svg#icon-btn-close"></use>
           </svg>
         </button>
         <p class="modal-title-text">
@@ -543,5 +622,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

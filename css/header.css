@@ -1,0 +1,243 @@
+.header {
+    border-bottom: 1px solid var(--color-cornflower);
+    box-shadow:
+        0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: var(--font-logo);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--color-iris);
+    text-transform: uppercase;
+}
+
+.logo-std-header {
+    color: var(--color-navy-blue);
+}
+
+.header-nav-link {
+    color: var(--color-navy-blue);
+
+    transition: color var(--transition-primary);
+}
+
+.header-nav-link:hover,
+.header-nav-link:focus {
+    color: var(--color-ocean);
+}
+
+.current {
+    color: var(--color-ocean);
+}
+
+.contact-link {
+    font-style: normal;
+    transition: color var(--transition-primary);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--color-ocean);
+}
+
+@media only screen and (max-width: 767px) {
+    .header {
+        padding: 24px 0;
+    }
+
+    .header-nav-list {
+        display: none;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .mobile-menu-open {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        height: 22px;
+    }
+
+    .icon-menu-hamburger {
+        stroke: var(--color-navy-blue);
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+
+        width: 100%;
+        height: 100%;
+        max-height: 796px;
+
+        background: var(--color-white);
+        box-shadow:
+            0px 2px 1px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 1px 6px rgba(46, 47, 66, 0.08);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition:
+            opacity var(--transition-primary),
+            visibility var(--transition-primary);
+    }
+
+    .mobile-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .mobile-container {
+        position: relative;
+
+        padding-top: 80px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+    }
+
+    .mobile-btn-close {
+        background-color: rgba(231, 233, 252, 0.1);
+        border: 1px solid rgba(46, 47, 66, 0.1);
+    }
+
+    .mobile-nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-bottom: auto;
+
+        gap: 40px;
+        margin-bottom: 284px;
+    }
+
+    .header-nav-link {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+    }
+
+    .mobile-contact-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 48px;
+
+        gap: 40px;
+    }
+
+    .mobile-link-tel {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+
+        color: var(--color-iris);
+    }
+
+    .mobile-link-mail {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+
+    .mobile-social-list {
+        justify-content: start;
+        gap: 56px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile-menu-open {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .header-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-nav-list {
+        gap: 40px;
+    }
+
+    .header-nav-item {
+        position: relative;
+    }
+
+    .header-nav-link {
+        font-weight: 500;
+    }
+
+    .current::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        top: 45px;
+        background-color: currentColor;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .header {
+        padding: 16px 0;
+    }
+
+    .logo {
+        margin-right: 120px;
+    }
+
+    .contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contact-item {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .header {
+        padding: 24px 0;
+    }
+
+    .logo {
+        margin-right: 76px;
+    }
+
+    .contact-list {
+        gap: 40px;
+    }
+}
