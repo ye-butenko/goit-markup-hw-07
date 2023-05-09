@@ -622,9 +622,8 @@ body {
 }
 
 .footer .logo {
-    display: inline-block;
+    display: block;
     text-align: center;
-    /* text-align: center; -не працює  */
     margin-bottom: 16px;
 }
 
@@ -703,6 +702,7 @@ body {
     }
 
     .footer .logo {
+        text-align: left;
         margin-right: 0;
     }
 
@@ -744,6 +744,10 @@ body {
 
     .footer-social {
         margin-right: auto;
+    }
+
+    .footer-form {
+        gap: 24px;
     }
 }
 
